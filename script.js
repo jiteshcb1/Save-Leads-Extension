@@ -54,7 +54,8 @@ function render(leads, date){
 deleteBtn.addEventListener("dblclick", function() {
     localStorage.clear()
     myLeads = []
-    render(myLeads)
+    date = []
+    render(myLeads, date)
 })
 
 inputBtn.addEventListener("click", function() {
@@ -64,5 +65,4 @@ inputBtn.addEventListener("click", function() {
     inputEl.value = ""
     localStorage.setItem("myLeads", JSON.stringify(myLeads))
     render(myLeads, date)
-
 })
